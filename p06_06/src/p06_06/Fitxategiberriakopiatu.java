@@ -21,18 +21,24 @@ public class Fitxategiberriakopiatu {
 			System.out.println("Nora mugitu nahi dituzu datuak (Direktorioa):");
 
 			String	DirLekuBerria = teklatua.nextLine();
-	        FileInputStream inputStream = new FileInputStream(fitxategiZaharra);
-	        FileOutputStream outputStream = new FileOutputStream(DirLekuBerria);
+			try {
+				FileInputStream inputStream = new FileInputStream(fitxategiZaharra);
+				FileOutputStream outputStream = new FileOutputStream(DirLekuBerria);
 
-	        byte[] buffer = new byte[1024];
-	        int bytesRead;
+				byte[] buffer = new byte[1024];
+				int bytesRead;
 
-	        while ((bytesRead = inputStream.read(buffer)) != -1) {
-	            outputStream.write(buffer, 0, bytesRead);
-	        }
+				while ((bytesRead = inputStream.read(buffer)) != -1) {
+					outputStream.write(buffer, 0, bytesRead);
+				}
 
-	        inputStream.close();
-	        outputStream.close();
+				inputStream.close();
+				outputStream.close();
+				teklatua.close();
+			} catch (IOException e) {
+				System.out.println("Error: " + e.getMessage());
+			}
+
 	    }
 	}
 
