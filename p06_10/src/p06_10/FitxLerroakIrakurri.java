@@ -25,8 +25,11 @@ public class FitxLerroakIrakurri
 			System.out.println("Fitxategi izena");
 			fitxIzena = teclado.nextLine();
 
+			//jatorrizko fitxategia non dagoen zehaztu
 			File             c1  = new File(fitxIzena); //Helbide absolutua
-			File             c2  = new File("C:\\Users\\1ag3.iorilope\\eclipse-workspace\\p06_10\\agenda.txt");
+
+			//Fitxategi berria non dagoen zehaztu
+			File             c2  = new File("C:\\Users\\1ag3.iorilope\\git\\repository11\\p06_10\\agenda.txt");
 			FileOutputStream f   = new FileOutputStream(c2);
 			DataOutputStream fls = new DataOutputStream(f);
 
@@ -38,6 +41,8 @@ public class FitxLerroakIrakurri
 				while (fl.ready() == true)
 				{
 					textuLerroa = fl.readLine();
+
+					//Lehenengo karakterea + bada lerro hori inprimatuko du,ez da oso eraginkorra baina telefono zenbakiak formatu internazionalean eskuratzeko balio du
 					if (textuLerroa.charAt(0) == '+')
 					{
 						fls.writeBytes(textuLerroa + '\r' + '\n');
