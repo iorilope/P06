@@ -69,7 +69,7 @@ public class A3 {
 		}
 		else {
 
-			String fitxizenberriaString = fitxIzena;
+			String fitxizenberriaString = fitxIzenaBerria;
 
 			Path fitxategiazarraFilePath = Path.of(dirString, fitxIzena);
 			Path fitxizenberriaFilePath = Path.of(dirString + "\\" + fitxizenberriaString);
