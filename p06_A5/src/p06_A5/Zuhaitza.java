@@ -32,6 +32,13 @@ public class Zuhaitza implements Serializable
 		izenArrunta = izena;
 	}
 
+	/**
+	 * 
+	 */
+	public Zuhaitza() {
+		
+	}
+
 	public void setIzenZientifikoa(String nombre) {
 		izenZientifikoa = nombre;
 	}
